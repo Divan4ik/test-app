@@ -46,6 +46,10 @@ export default class Map {
         zoom: this.config.zoom,
         controls: this.config.controls || []
       })
+      this.instance.geoObjects.add(new ymaps.Placemark(this.config.center, {}, {
+            preset: 'islands#governmentCircleIcon',
+            iconColor: '#3b5998'
+        }))
     })
   }
 
